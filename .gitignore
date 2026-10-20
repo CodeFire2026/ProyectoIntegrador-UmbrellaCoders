@@ -1,0 +1,6 @@
+*.class
+build/
+dist/
+/JuegoTruco/nbproject/private/
+.DS_Store
+Thumbs.db
