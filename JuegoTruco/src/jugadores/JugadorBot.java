@@ -4,11 +4,11 @@ import jugadores.Jugador;
 import estructura.Carta;
 import java.util.Random;
 
-/**
- * Jugador controlado por la computadora. Primera version: elige una carta
- * al azar de las que le quedan. No imprime nada: de anunciar la jugada se
- * encarga la clase Mano.
- */
+/*
+Jugador controlado por la computadora. Primera version: elige una carta
+al azar de las que le quedan. No imprime nada: de anunciar la jugada se
+encarga la clase Mano.
+*/
 public class JugadorBot extends Jugador {
 
     private final Random azar;

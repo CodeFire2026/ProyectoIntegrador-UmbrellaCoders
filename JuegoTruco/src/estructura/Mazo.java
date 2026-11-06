@@ -4,9 +4,9 @@ import estructura.Carta;
 import java.util.ArrayList;
 import java.util.Random;
 
-/**
- * El mazo de 40 cartas. Se arma, se mezcla y reparte cartas.
- */
+/*
+El mazo de 40 cartas. Se arma, se mezcla y reparte cartas.
+*/
 public class Mazo {
 
     private final ArrayList<Carta> cartas;
@@ -30,10 +30,10 @@ public class Mazo {
         }
     }
 
-    /**
-     * Mezcla el mazo con el algoritmo de Fisher-Yates: recorre de atras
-     * para adelante e intercambia cada carta con otra de posicion al azar.
-     */
+     /*
+    Mezcla el mazo con el algoritmo de Fisher-Yates: recorre de atras
+    para adelante e intercambia cada carta con otra de posicion al azar.
+   */
     public void mezclar() {
         for (int i = cartas.size() - 1; i > 0; i--) {
             int j = azar.nextInt(i + 1);
@@ -43,17 +43,17 @@ public class Mazo {
         }
     }
 
-    /**
-     * Vuelve a armar las 40 cartas y las mezcla. Se usa al empezar cada mano.
-     */
+    /*
+    Vuelve a armar las 40 cartas y las mezcla. Se usa al empezar cada mano.
+  */
     public void reiniciar() {
         armar();
         mezclar();
     }
 
-    /**
-     * Saca 'cantidad' cartas de arriba del mazo y las devuelve.
-     */
+    /*
+    Saca "cantidad" cartas de arriba del mazo y las devuelve.
+  */
     public ArrayList<Carta> repartir(int cantidad) {
         if (cantidad < 0 || cantidad > cartas.size()) {
             throw new IllegalArgumentException(

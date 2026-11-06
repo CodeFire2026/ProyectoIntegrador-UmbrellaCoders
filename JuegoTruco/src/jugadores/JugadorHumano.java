@@ -5,10 +5,10 @@ import estructura.Carta;
 import java.util.List;
 import java.util.Scanner;
 
-/**
- * Jugador controlado por una persona: muestra sus cartas y pide por
- * teclado cual jugar, validando que la entrada sea correcta.
- */
+/*
+Jugador controlado por una persona: muestra sus cartas y pide por
+teclado cual jugar, validando que la entrada sea correcta.
+*/
 public class JugadorHumano extends Jugador {
 
     // Se recibe el Scanner desde afuera para usar UNO SOLO en todo el programa
