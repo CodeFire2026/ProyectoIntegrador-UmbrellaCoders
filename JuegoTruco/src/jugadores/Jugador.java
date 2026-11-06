@@ -1,3 +1,6 @@
+package jugadores;
+
+import estructura.Carta;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

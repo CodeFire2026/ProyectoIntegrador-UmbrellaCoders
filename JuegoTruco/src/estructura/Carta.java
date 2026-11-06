@@ -1,3 +1,5 @@
+package estructura;
+
 /**
  * Representa una carta de la baraja espanola de 40 cartas (sin 8 ni 9).
  * Sabe cual es su jerarquia (fuerza) en el truco.

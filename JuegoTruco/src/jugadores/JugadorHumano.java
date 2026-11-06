@@ -1,3 +1,7 @@
+package jugadores;
+
+import jugadores.Jugador;
+import estructura.Carta;
 import java.util.List;
 import java.util.Scanner;
 

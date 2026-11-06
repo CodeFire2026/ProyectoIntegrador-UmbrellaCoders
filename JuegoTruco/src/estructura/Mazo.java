@@ -1,3 +1,6 @@
+package estructura;
+
+import estructura.Carta;
 import java.util.ArrayList;
 import java.util.Random;
 
