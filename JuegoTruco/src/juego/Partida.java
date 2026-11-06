@@ -42,27 +42,28 @@ public class Partida {
         }while(j1.getPuntos() < puntosParaGanar && j2.getPuntos() < puntosParaGanar);
         
         
-        String ganador;
-        String mensaje;
+        String ganador, mensaje, mensaje2; // Variables para mostrar el fin de la partida
         if (j1.getPuntos() >= puntosParaGanar){
             ganador = j1.getNombre();
             mensaje = "\tFELICIDADES, HAS GANADO!";
+            mensaje2 = j1.getNombre()+" "+j1.getPuntos()+" - "+j2.getNombre()+" "+j2.getPuntos();
         }
         else {
             ganador = j2.getNombre();
             mensaje = "  Estuviste cerca, suerte para la proxima";
+            mensaje2 = j2.getNombre()+" "+j2.getPuntos()+" - "+j1.getNombre()+" "+j1.getPuntos();
         }
-        mostrarGanador(mensaje, ganador);
+        mostrarGanador(mensaje,mensaje2, ganador);
         
     }
-    public static void mostrarGanador(String mensaje, String ganador){
+    public static void mostrarGanador(String mensaje,String mensaje2, String ganador){
         System.out.println("");
         System.out.println("=".repeat(45));
         System.out.println("\t  FIN DE LA PARTIDA");
         System.out.println("=".repeat(45));
         System.out.println(mensaje);
         System.out.println("\n\t    GANADOR: " + ganador);
-        System.out.println("");
+       System.out.println("\n  Marcador Final: " +  mensaje2);
         System.out.println("=".repeat(45));
         System.out.println("");
     }
