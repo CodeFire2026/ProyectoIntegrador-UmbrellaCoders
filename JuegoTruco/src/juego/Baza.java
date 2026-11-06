@@ -5,7 +5,6 @@ La baza es una jugada dentro de una mano: cada jugador tira una carta
 y gana el que tiro la de mayor jerarquia.
 Esta clase solo guarda las dos cartas y dice cual gano.
 */
-public class Baza {
 import estructura.Carta;
 
 public class Baza {
@@ -33,5 +32,4 @@ public class Baza {
             return 0; // Si es parda
         }
     }
->>>>>>> 2c5c8401527da317219e260d31dabb56b25406eb
 }

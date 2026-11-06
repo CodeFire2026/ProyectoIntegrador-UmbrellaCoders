@@ -1,21 +1,4 @@
 package juego;
-<<<<<<< HEAD
-/*
-Partida: Se juegan las manos hasta que algun jugador llega a 15 puntos
-*/
-public class Partida {
-    private String jugador1; //Sera de tipo Jugador cuando mi comp suba su parte
-    private String jugador2;
-    private int puntosParaGanar; //Puntos necesarios para ganar y finalizar la partida
-    
-    public Partida(String jugador1,String jugador2){
-        this.jugador1 = jugador1;
-        this.jugador2 = jugador2;
-        this.puntosParaGanar = 15;
-    }
-    public void iniciar(){
-
-=======
 
 import jugadores.Jugador;
 
@@ -83,6 +66,5 @@ public class Partida {
        System.out.println("\n  Marcador Final: " +  mensaje2);
         System.out.println("=".repeat(45));
         System.out.println("");
->>>>>>> 2c5c8401527da317219e260d31dabb56b25406eb
     }
 }
