@@ -27,7 +27,7 @@ public class Partida {
             
             Mano mano = new Mano(j1, j2, esMano);
             Jugador ganaMano = mano.jugar();
-            ganaMano.sumarPuntos(3); //Suma tres puntos por mano ganada
+            ganaMano.sumarPuntos(mano.getPuntosMano());
             
             System.out.println("\n Gana la mano: " + ganaMano.getNombre());
             

@@ -26,4 +26,16 @@ public class JugadorBot extends Jugador {
         int indice = azar.nextInt(getMano().size());
         return sacarCarta(indice);
     }
+    
+    // Metodos cantar y aceptar Truco
+    @Override
+    public boolean cantarTruco(){
+        // Math.random genera un numero aleatorio entre 0 y uno
+        // Si genera uno menor al establecido, devuelve true y canta, sino false y juega callado
+        return Math.random() < 0.4; // Le damos un 40% de probabilidades al bot de cantar truco
+    }
+    @Override
+    public boolean aceptarTruco(){
+        return Math.random() >= 0.5; // Lo mismo que el canto, pero con mas posibilidades de aceptar
+    }
 }

@@ -71,6 +71,12 @@ public abstract class Jugador {
     devuelve. Cada tipo de jugador lo resuelve a su manera.
   */
     public abstract Carta elegirCarta();
+    
+    /*
+  Metodo para cantar truco y metodo para aceptar truco
+  */
+    public abstract boolean cantarTruco(); // De tipo boolean porque acepta o no acepta
+    public abstract boolean aceptarTruco(); // """
 
     @Override
     public String toString() {
