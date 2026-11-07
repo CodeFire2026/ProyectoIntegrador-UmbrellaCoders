@@ -50,4 +50,49 @@ public class JugadorHumano extends Jugador {
 
         return sacarCarta(opcion - 1);
     }
+    
+    // Sobreescritura del metodo cantarTruco
+    @Override
+    public boolean cantarTruco(){
+        mostrarCartas();
+        System.out.println("Cantar Truco? s/n");
+        String canto = teclado.nextLine().trim().toLowerCase();
+        if (canto.equals("s")){ // Canta
+            return true;
+        }
+        else if (canto.equals("n")){// No canta
+            return false;
+        }
+        else{
+            System.out.println("Opcion no valida: Elija s/n");
+            return cantarTruco();
+        }
+    }
+    
+    // Metodo para mostrar las cartas del jugador
+    public void mostrarCartas(){
+        System.out.println("\nTus cartas:");
+        List<Carta> mano = getMano();
+        for (int i = 0; i < mano.size(); i++) {
+            System.out.println("  " + (i + 1) + ") " + mano.get(i));
+        }
+    }
+    // Sobreescritura del metodo aceptarTruco
+    @Override
+    public boolean aceptarTruco(){
+        mostrarCartas();
+        System.out.println("Aceptar Truco? s/n");
+        String aceptar = teclado.nextLine().trim().toLowerCase();
+        if (aceptar.equals("s")){ // Acepta
+            return true;
+        }
+        else if (aceptar.equals("n")){ // No acepta
+            return false;
+        }
+        else{
+            System.out.println("Opcion no valida: Elija s/n");
+            return aceptarTruco();
+        }
+    }
+    
 }
