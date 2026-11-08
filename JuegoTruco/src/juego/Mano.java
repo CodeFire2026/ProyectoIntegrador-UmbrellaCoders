@@ -11,6 +11,7 @@ public class Mano {
     private Jugador j1;
     private Jugador j2;
     private int esMano;
+    private static final int CARTAS_MANO = 3;
     
     // Constructor para los jugadores y quien es mano
     public Mano(Jugador j1, Jugador j2, int esMano){
@@ -27,8 +28,8 @@ public class Mano {
         
         //Reparte tres cartas a cada jugador, recibirCartas descarta las cartas
         // de la mano anterior para empezar limpio
-        j1.recibirCartas(mazo.repartir(3));
-        j2.recibirCartas(mazo.repartir(3));
+        j1.recibirCartas(mazo.repartir(CARTAS_MANO));
+        j2.recibirCartas(mazo.repartir(CARTAS_MANO));
         
         int ganador1 = 0; // Bazas ganadas por el jugador 1
         int ganador2 = 0; // Bazas ganadas por el jugador 2

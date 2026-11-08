@@ -8,12 +8,11 @@ public class Partida {
   */
     private Jugador j1;
     private Jugador j2;
-    private int puntosParaGanar;
+    private static final int PUNTOS_PARA_GANAR = 15;// Por ahora 15
     
     public Partida(Jugador j1, Jugador j2){
         this.j1 = j1;
         this.j2 = j2;
-        this.puntosParaGanar = 15; // Por ahora 15
     }
     
     // Juega las manos y anuncia el ganador
@@ -39,11 +38,11 @@ public class Partida {
                 esMano = 1;
             }
             
-        }while(j1.getPuntos() < puntosParaGanar && j2.getPuntos() < puntosParaGanar);
+        }while(j1.getPuntos() < PUNTOS_PARA_GANAR && j2.getPuntos() < PUNTOS_PARA_GANAR);
         
         
         String ganador, mensaje, mensaje2; // Variables para mostrar el fin de la partida
-        if (j1.getPuntos() >= puntosParaGanar){
+        if (j1.getPuntos() >= PUNTOS_PARA_GANAR){
             ganador = j1.getNombre();
             mensaje = "\tFELICIDADES, HAS GANADO!";
             mensaje2 = j1.getNombre()+" "+j1.getPuntos()+" - "+j2.getNombre()+" "+j2.getPuntos();

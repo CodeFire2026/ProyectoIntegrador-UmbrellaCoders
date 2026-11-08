@@ -38,7 +38,7 @@ public class Main {
                     partida.jugar();
                     break;
                 case 2:
-                        Reglas.mostrar_reglas();
+                        Reglas.mostrarReglas(teclado);
                         break;
                 case 3:
                     System.out.println("\nCerrando programa..");

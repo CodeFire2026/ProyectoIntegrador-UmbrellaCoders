@@ -3,9 +3,42 @@ package estructura;
 import java.util.Scanner;
 
 public class Reglas {
-    private static Scanner teclado = new Scanner(System.in);
-    
-    public static String mostrar_reglas(){
+    private static final String[] JERARQUIA = {
+        "1 de Espada",
+        "1 de Basto",
+        "7 de Espada",
+        "7 de Oro",
+        "Todos los 3",
+        "Todos los 2",
+        "1 de Oro y 1 de Copa",
+        "Todos los 12",
+        "Todos los 11",
+        "Todos los 10",
+        "7 de Basto y 7 de Copa",
+        "Todos los 6",
+        "Todos los 5",
+        "Todos los 4"
+    };
+    public static void mostrarJerarquia(){
+        for (int i = 1; i < JERARQUIA.length; i++) {
+                        System.out.println(i + 1+". "+JERARQUIA[i]);
+                    }
+    }
+    private static void mostrarDetalles() {
+        System.out.println("\n- Acerca del sistema -");
+        System.out.println("Juego: Truco Argentino");
+        System.out.println("Version: 1.2");
+        System.out.println("Arquitectura: Programacion Orientada a Objetos (POO)");
+        System.out.println("Bot: Primera version:");
+        System.out.println("Elige las cartas aleatoriamente.");
+        System.out.println("Proximas mejoras del juego:");
+        System.out.println("- Decisiones del bot segun jerarquia de las cartas.");
+        System.out.println("- Retruco.");
+        System.out.println("- Vale Cuatro.");
+        System.out.println("- Envido.");
+    }
+            
+    public static void  mostrarReglas(Scanner teclado){
         System.out.println("\n-- Reglas del juego --");
         System.out.println("Formato: jugador humano vs bot.");
         System.out.println("Se reparten tres cartas a cada jugador y se juegan tres bazas por mano.");
@@ -17,38 +50,27 @@ public class Reglas {
         System.out.println("Cada mano vale 3 puntos. No hay cantos.");
         System.out.println("El juego termina cuando algun jugador lleggue a 15 puntos.");
         
-        int opcion2 = 0;
+        int opcion = 0;
         do {
-            System.out.println("\n 1. Ver jerarquia de cartas\n 2. Volver\n");
+            System.out.println("\n 1. Ver jerarquia de cartas\n 2. Ver mas detalles\n 3. Volver");
             System.out.print("Elija una opcion: ");
             try {
-                opcion2 = Integer.parseInt(teclado.nextLine().trim());
+                opcion = Integer.parseInt(teclado.nextLine().trim());
             } catch (NumberFormatException e) {
-            opcion2 = 0;
+            opcion = 0;
             }
-            switch (opcion2) {
+            switch (opcion) {
                 case 1:
-                    System.out.println(" 1. 1 de Espada");
-                    System.out.println(" 2. 1 de Basto");
-                    System.out.println(" 3. 7 de Espada");
-                    System.out.println(" 4. 7 de Oro");
-                    System.out.println(" 5. Todos los 3");
-                    System.out.println(" 6. Todos los 2");
-                    System.out.println(" 7. 1 de Oro y 1 de Copa");
-                    System.out.println(" 8. Todos los 12");
-                    System.out.println(" 9. Todos los 11");
-                    System.out.println("10. Todos los 10");
-                    System.out.println("11. 7 de Basto y 7 de Copa");
-                    System.out.println("12. Todos los 6");
-                    System.out.println("13. Todos los 5");
-                    System.out.println("14. Todos los 4");
+                    mostrarJerarquia();
                     break;
                 case 2:
+                    mostrarDetalles();
+                    break;
+                case 3:
                     break;
                 default:
                     System.out.println("Opcion no valida.");
             }
-        } while (opcion2 != 2);
-        return null;
+        } while (opcion != 2);
     }
 }
