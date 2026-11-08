@@ -42,13 +42,13 @@ public class Reglas {
         System.out.println("\n-- Reglas del juego --");
         System.out.println("Formato: jugador humano vs bot.");
         System.out.println("Se reparten tres cartas a cada jugador y se juegan tres bazas por mano.");
-        System.out.println("En cada baza gana la carta con mayor jerarquia.");
-        System.out.println("Gana la mano quien gane dos bazas.");
+        System.out.println("En cada baza gana la carta de mayor jerarquia.");
+        System.out.println("Gana la mano quien gane dos bazas, o en su defecto si alguien canta truco y el rival no acepta.");
         System.out.println("Para pardas(baza empatada):");
         System.out.println("En caso de que la primer baza sea parda, gana quien gane la segunda baza, o en su defecto la tercera");
         System.out.println("En caso de que la segunda baza sea parda, gana la mano quien gano la primer baza.");
-        System.out.println("Cada mano vale 3 puntos. No hay cantos.");
-        System.out.println("El juego termina cuando algun jugador lleggue a 15 puntos.");
+        System.out.println("Las manos sin canto de truco valen 1 punto, con canto 2");
+        System.out.println("El juego termina cuando algun jugador llega a 15 puntos.");
         
         int opcion = 0;
         do {
@@ -71,6 +71,6 @@ public class Reglas {
                 default:
                     System.out.println("Opcion no valida.");
             }
-        } while (opcion != 2);
+        } while (opcion != 3);
     }
 }
